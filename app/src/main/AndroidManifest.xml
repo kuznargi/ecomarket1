@@ -13,17 +13,17 @@
         android:theme="@style/Theme.Ecomarket"
         tools:targetApi="31">
         <activity
-            android:name=".GetStarted"
+            android:name=".View.GetStarted"
             android:exported="false" />
         <activity
-            android:name=".NavigationActivity"
+            android:name=".View.NavigationActivity"
             android:exported="true" > <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="false">
 
         </activity>
