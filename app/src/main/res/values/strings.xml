@@ -3,4 +3,16 @@
     <string name="title1">Меняй мир каждый день</string>
     <string name="title2">Маленькие шаги — большое будущее</string>
     <string name="title3">Действуй ради планеты</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string-array name="profile_widget_items">
+        <item>Edit Profile</item>
+        <item>Liked</item>
+        <item>Award</item>
+        <item>Logout</item>
+        <item>Completed Tasks</item>
+
+    </string-array>
 </resources>

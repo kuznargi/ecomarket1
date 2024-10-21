@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.NavigationActivity">
+    tools:context=".Controller.NavigationActivity">
 
     <!-- Skip Button -->
     <Button
@@ -14,6 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skip"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/darker_gray"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:padding="8dp"

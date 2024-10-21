@@ -1,4 +1,4 @@
-package com.eco.ecomarket.View;
+package com.eco.ecomarket.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -73,7 +73,7 @@ public class NavigationActivity extends AppCompatActivity {
         });
 
         skipButton.setOnClickListener(v -> {
-            Intent intent = new Intent(NavigationActivity.this, MainActivity.class);
+            Intent intent = new Intent(NavigationActivity.this, GetStarted.class);
             startActivity(intent);
             finish();
         });

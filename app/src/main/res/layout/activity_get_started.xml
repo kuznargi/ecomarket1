@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".View.GetStarted">
+    tools:context=".Controller.GetStarted">
 
     <ImageView
         android:id="@+id/logo"
@@ -49,8 +49,9 @@
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="263dp"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:text="Login"
+        android:background="@drawable/round_input_fields"
         android:layout_marginBottom="-90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,20 +16,44 @@
         android:theme="@style/Theme.Ecomarket"
         tools:targetApi="31">
         <activity
-            android:name=".View.GetStarted"
+            android:name=".Controller.Map"
             android:exported="false" />
         <activity
-            android:name=".View.NavigationActivity"
-            android:exported="true" > <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+            android:name=".Controller.ForgotPassword"
+            android:exported="false" />
         <activity
-            android:name=".View.MainActivity"
-            android:exported="false">
+            android:name=".Controller.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".Controller.WeekViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.Otp"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.Login"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.GetStarted"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.NavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
