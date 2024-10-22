@@ -3,6 +3,7 @@ package com.eco.ecomarket.Controller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity {
     private Button signUp;
@@ -45,19 +47,26 @@ public class SignUp extends AppCompatActivity {
                     password.setError("Password connot be empty");
                 }
                 else {
-                    auth.createUserWithEmailAndPassword(user,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                          if(task.isSuccessful()){
-                              Toast.makeText(getApplicationContext(),"Sign Up successful",Toast.LENGTH_SHORT).show();
-                              intent=new Intent(getApplicationContext(), Otp.class);
-                              startActivity(intent);
-                          }
-                          else {
-                              Toast.makeText(getApplicationContext(),"Sign Up failed",Toast.LENGTH_SHORT).show();
-                          }
-                        }
-                    });
+                    //send to email verification user
+                    registerUser(email.getText().toString().trim(),password.getText().toString().trim());
+
+//
+//                    //create user
+//                    auth.createUserWithEmailAndPassword(user,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                          if(task.isSuccessful()){
+//                              //Send OTP to user
+//                              Toast.makeText(getApplicationContext(),"A confirmation code was sent to your e-mail",Toast.LENGTH_SHORT).show();
+//                              intent=new Intent(getApplicationContext(), Otp.class);
+//                              intent.putExtra("email" , email.getText().toString().trim());
+//                              startActivity(intent);
+//                          }
+//                          else {
+//                              Toast.makeText(getApplicationContext(),"Sign Up failed",Toast.LENGTH_SHORT).show();
+//                          }
+//                        }
+//                    });
                 }
 
 
@@ -80,6 +89,34 @@ public class SignUp extends AppCompatActivity {
         });
 
     }
+
+    private void registerUser(String mail, String pass){
+        auth.createUserWithEmailAndPassword(mail,pass)
+                .addOnCompleteListener(this,task -> {
+                    if (task.isSuccessful()){
+                        FirebaseUser user = auth.getCurrentUser();
+                        if (user != null){
+                            user.sendEmailVerification()
+                                    .addOnCompleteListener(task1 -> {
+                                        if (task1.isSuccessful()){
+                                            Toast.makeText(getApplicationContext(),"A confirmation code was sent to your e-mail",Toast.LENGTH_SHORT).show();
+                                            intent=new Intent(getApplicationContext(), Otp.class);
+                                            intent.putExtra("email" , email.getText().toString().trim());
+                                            startActivity(intent);
+                                            finish();
+                                        }else{
+                                            Log.e("email verification","error on sendind verification letter:" + task1.getException().getMessage());
+                                        }
+                                    });
+                        }
+                    }else{
+                        Log.e("registration","error on registration :" + task.getException().getMessage());
+                        Toast.makeText(getApplicationContext(),"Sign Up failed",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+    }
+
     void initWidgets(){
         auth=FirebaseAuth.getInstance();
         signUp=findViewById(R.id.signUpBtn);
