@@ -3,6 +3,7 @@ package com.eco.ecomarket.Controller;
 import static com.eco.ecomarket.Model.CalendarUtils.daysInWeekArray;
 import static com.eco.ecomarket.Model.CalendarUtils.monthYearFromDate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,18 +17,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.eco.ecomarket.Adapter.CalendarAdapter;
 import com.eco.ecomarket.Adapter.TaskAdapter;
+import com.eco.ecomarket.AddTaskActivity;
 import com.eco.ecomarket.Model.CalendarUtils;
 import com.eco.ecomarket.Interface.CalendarRecyclerViewInterface;
 import com.eco.ecomarket.Model.TaskModel;
 import com.eco.ecomarket.R;
+import com.eco.ecomarket.fragments.AddEventFragment;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 
 public class WeekViewActivity extends AppCompatActivity implements CalendarRecyclerViewInterface {
     TextView monthYearText;
     RecyclerView calendarRecyclerView;
-    Button next,back;
+    Button next,back,newTask,monthly;
     ListView taskListView;
 
 
@@ -53,6 +57,12 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarRecyc
                 setWeekView();
             }
         });
+        newTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             finish();
+            }
+        });
 
 
     }
@@ -62,6 +72,7 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarRecyc
         next=findViewById(R.id.btnNext);
         back=findViewById(R.id.btnBack);
         taskListView=findViewById(R.id.taskListView);
+        newTask=findViewById(R.id.newTask);
     }
 
     private void setWeekView() {

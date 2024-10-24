@@ -25,7 +25,9 @@
                 android:text="@string/back"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+
+                />
 
             <TextView
                 android:id="@+id/monthYearTV"
@@ -123,19 +125,26 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <TextView
+
+        <Button
+            android:id="@+id/newTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Events"
+            android:text="New Task"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textColor="@color/green"
-            android:textSize="25sp"/>
+            android:textAllCaps="false"
+            android:background="@drawable/round_input_fields"
 
+            android:textSize="20dp"/>
         <ListView
             android:id="@+id/taskListView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"/>
+
+
     </LinearLayout>
 
 </FrameLayout>

@@ -26,7 +26,8 @@ public class AccountFragment extends Fragment implements RecyclerViewInterface {
             R.drawable.ic_heard,
             R.drawable.award,
             R.drawable.ic_ecology,
-            R.drawable.ic_ecology
+            R.drawable.ic_map,
+            R.drawable.ic_info
     };
 
     @Override

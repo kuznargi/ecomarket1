@@ -3,6 +3,7 @@ package com.eco.ecomarket.Controller;
 import static com.eco.ecomarket.Model.CalendarUtils.daysInWeekArray;
 import static com.eco.ecomarket.Model.CalendarUtils.monthYearFromDate;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,6 +23,7 @@ import com.eco.ecomarket.Model.CalendarUtils;
 import com.eco.ecomarket.Interface.CalendarRecyclerViewInterface;
 import com.eco.ecomarket.Model.TaskModel;
 import com.eco.ecomarket.R;
+import com.eco.ecomarket.fragments.AddEventFragment;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -31,7 +33,7 @@ public class WeekViewFragment extends Fragment implements CalendarRecyclerViewIn
 
     TextView monthYearText;
     RecyclerView calendarRecyclerView;
-    Button next,back;
+    Button next,back,newTask;
     ListView taskListView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,6 +57,7 @@ public class WeekViewFragment extends Fragment implements CalendarRecyclerViewIn
                 setWeekView();
             }
         });
+
         return view;
     }
     public void initWidgets(View view) {
@@ -63,6 +66,7 @@ public class WeekViewFragment extends Fragment implements CalendarRecyclerViewIn
         next=view.findViewById(R.id.btnNext);
         back=view.findViewById(R.id.btnBack);
         taskListView=view.findViewById(R.id.taskListView);
+//        newTask=view.findViewById(R.id.newTask);
     }
 
     private void setWeekView() {

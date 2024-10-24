@@ -10,13 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/btnBack"
@@ -124,18 +134,24 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <TextView
+        <Button
+            android:id="@+id/newTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Events"
+            android:text="New Task"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textColor="@color/green"
-            android:textSize="25sp"/>
+            android:textAllCaps="false"
+            android:background="@drawable/round_input_fields"
 
+            android:textSize="20dp"/>
         <ListView
             android:id="@+id/taskListView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </LinearLayout>

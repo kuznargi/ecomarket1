@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
     tools:context=".fragments.AchievemntFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="400dp"
@@ -91,4 +91,8 @@
         android:layout_marginBottom="30sp"
         android:text="Balance is an important aspect of life, whether it be in terms of personal finances, work-life harmony, or physical and mental well-being. Maintaining balance allows individuals to perform at their best in different areas without sacrificing their health, happiness, or relationships. Financial balance means managing income and expenses in a way that ensures sustainability and avoids unnecessary debt. Work-life balance involves allocating time and energy effectively between career ambitions and personal life, ensuring that neither aspect dominates at the expense of the other. In terms of health, balance can refer to a well-rounded diet, a mixture of exercise and rest, and a blend of mental stimulation and relaxation. Striving for balance in all these areas can lead to a more fulfilling and harmonious life, where each element is given the attention it needs without overwhelming the others."
         android:textColor="@color/gray" />
-</FrameLayout>
+
+
+
+
+</LinearLayout>

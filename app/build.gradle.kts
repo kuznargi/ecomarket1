@@ -32,10 +32,16 @@ android {
     }
     buildFeatures{
         viewBinding = true
+
     }
+
 }
 
 dependencies {
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("com.github.blackfizz:eazegraph:1.2.2@aar")
+    implementation ("com.nineoldandroids:library:2.4.0")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation ("com.yandex.android:maps.mobile:4.8.1-lite")
     implementation ("com.google.firebase:firebase-bom:32.2.0")
     implementation ("com.google.firebase:firebase-auth:23.0.0")

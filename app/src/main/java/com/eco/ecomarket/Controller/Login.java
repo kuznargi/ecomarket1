@@ -78,6 +78,13 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent=new Intent(getApplicationContext(),NewPassword.class);
+                startActivity(intent);
+            }
+        });
 
     }  public void initWidgets(){
         auth=FirebaseAuth.getInstance();

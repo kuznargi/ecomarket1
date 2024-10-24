@@ -1,4 +1,4 @@
-package com.eco.ecomarket.fragments;
+package com.eco.ecomarket;
 
 import android.os.Bundle;
 
@@ -7,8 +7,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.eco.ecomarket.R;
 
 /**
  * A simple {@link Fragment} subclass.
