@@ -17,6 +17,8 @@ import com.eco.ecomarket.fragments.AchievemntFragment;
 import com.eco.ecomarket.fragments.AddEventFragment;
 import com.eco.ecomarket.fragments.CalendarFragment;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     @Override
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.home:
                     //replaceFragment(new HomeFragment());
                     //replaceFragment(new );
-                    Intent intent=new Intent(getApplicationContext(),Map.class);
+                    Intent intent=new Intent(getApplicationContext(), Map.class);
                     startActivity(intent);
                     break;
                 case R.id.account:
