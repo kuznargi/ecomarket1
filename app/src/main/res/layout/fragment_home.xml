@@ -21,7 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Surname Name"
+            android:text="Kennedy John"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:font="@font/poppins_regular"
 
@@ -55,7 +56,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Air Pollution"
+    android:text="Emissions of Air Pollution"
     android:fontFamily="@font/poppins_semibold"
     android:textColor="@color/black"
     android:textSize="20sp"
@@ -111,7 +112,7 @@
                         android:id="@+id/tvFirst"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="R"
+                        android:text="Industry"
                         android:paddingLeft="10dp"/>
 
                 </LinearLayout>
@@ -134,7 +135,7 @@
                         android:id="@+id/tvSecond"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Python"
+                        android:text="Transportation"
                         android:paddingLeft="10dp"/>
 
                 </LinearLayout>
@@ -157,7 +158,7 @@
                         android:id="@+id/tvThird"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="C++"
+                        android:text="Commercial Products"
                         android:paddingLeft="10dp"/>
 
                 </LinearLayout>
@@ -169,19 +170,20 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp">
 
-                    <!--View to display the blue color icon-->
+
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
                         android:background="@color/Java"/>
 
-                    <!--Text view to display Java text -->
+
                     <TextView
                         android:id="@+id/tvFourth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Java"
+                        android:text="Agriculture"
                         android:paddingLeft="10dp"/>
+
 
                 </LinearLayout>
 
@@ -190,13 +192,24 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Pollution of Kazakhstan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:layout_below="@+id/cardViewGraph"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+
         android:layout_marginBottom="20dp"
         android:elevation="10dp"
         app:cardCornerRadius="10dp"

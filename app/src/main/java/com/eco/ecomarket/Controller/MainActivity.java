@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.eco.ecomarket.PlatinumFragment;
 import com.eco.ecomarket.R;
 import com.eco.ecomarket.databinding.ActivityMainBinding;
 import com.eco.ecomarket.fragments.AccountFragment;
@@ -33,16 +34,17 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home:
+                    replaceFragment(new HomeFragment());
                     //replaceFragment(new HomeFragment());
                     //replaceFragment(new );
-                    Intent intent=new Intent(getApplicationContext(), Map.class);
-                    startActivity(intent);
+                    //Intent intent=new Intent(getApplicationContext(), Map.class);
+                    //startActivity(intent);
                     break;
                 case R.id.account:
                     replaceFragment(new AccountFragment());
                     break;
                 case R.id.award:
-                    replaceFragment(new AchievemntFragment());
+                    replaceFragment(new PlatinumFragment());
                     break;
                 case R.id.calendar:
                     replaceFragment(new CalendarFragment());
